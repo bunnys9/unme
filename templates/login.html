@@ -1,0 +1,30 @@
+<html>
+    {% load static %}
+    <head>
+        <title>UnmE | Login Page</title>
+        <link rel ='stylesheet' href="{% static 'css/loginpage.css' %}" />
+    </head>
+
+<body>
+    <div id="header">
+        <img src = "{% static 'images/pra.jpg' %}"  height="80"/>
+        <h3>Welcome to unme Application</h3>
+    
+    </div>
+
+    <div id="login-form">
+        <article>Login</article>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Login"  />
+        </form>
+
+    </div>
+
+    <div id="footer">    
+        <h4>All Copyright @ Chandragiri Anil Prasad reserved</h4>
+    </div>
+</body>
+
+</html>
